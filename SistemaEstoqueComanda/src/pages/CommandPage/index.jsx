@@ -1,7 +1,10 @@
 import React from 'react'
+import { Header } from '../../components/Header'
 
 export const CommandPage = () => {
   return (
-    <div>CommandPage</div>
+    <div>
+      <Header/>
+      CommandPage</div>
   )
 }
