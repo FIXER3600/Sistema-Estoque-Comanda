@@ -1,3 +1,5 @@
+import { Flex } from '@chakra-ui/react'
+import { Typography } from '@mui/material'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 export const InitialPage = () => {
@@ -6,6 +8,14 @@ export const InitialPage = () => {
     navigate('/login')
   }, 2000)
   return (
-    <div>BEM-VINDO</div>
+    <Flex
+    justify="center"
+    direction="column"
+    align="center"
+    minH="100vh">
+      <Typography variant="h4">
+          BEM-VINDO
+        </Typography>
+      </Flex>
   )
 }

@@ -1,25 +1,25 @@
 export const goToLoginPage=(navigate)=>{
 	navigate("/login")
 }
-export const goToHomePage=()=>{
+export const goToHomePage=(navigate)=>{
 	navigate("/home")
 }
-export const goSignInPage=()=>{
+export const goSignInPage=(navigate)=>{
 	navigate("/sign")
 }
-export const goToProfilePage=()=>{
+export const goToProfilePage=(navigate)=>{
 	navigate("/profile")
 }
-export const goToEditProfilePage=()=>{
+export const goToEditProfilePage=(navigate)=>{
 	navigate("/profile/edit")
 }
-export const goToCommandPage=()=>{
+export const goToCommandPage=(navigate)=>{
 	navigate("/command")
 }
-export const goToFinishReqPage=()=>{
+export const goToFinishReqPage=(navigate)=>{
 	navigate("/finishrequest")
 }
-export const goToRequestPage=()=>{
+export const goToRequestPage=(navigate)=>{
 	navigate("/request")
 }
 
