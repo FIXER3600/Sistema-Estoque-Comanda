@@ -1,10 +1,12 @@
-import { Container, Flex, Input, Text } from '@chakra-ui/react';
-import { Button, InputLabel, MenuItem, Select, Typography } from '@mui/material';
+import { Container, Flex, Text } from '@chakra-ui/react';
+import { Button, MenuItem, Select, Typography } from '@mui/material';
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
-import { Contained, StyledInput } from '../LoginPage/styled';
+import { goToLoginPage } from '../../routes/coordinator';
+import { Contained, StyledInput } from './styled';
 
-export const SignInPage = () => {
+export const RegisterAttendant = () => {
   const { form, onChangeForm, errors, setErrors, span, setSpan } = useForm({
     nome: "",
     sobrenome:"",
@@ -15,13 +17,14 @@ export const SignInPage = () => {
     cpf: "",
     password: "",
   });
+  const navigate=useNavigate();
   return (
     <Contained  justify="center"
     direction="column"
     align="center"
     minH="100vh">
-      <Typography variant="h4">
-          CADASTRO
+      <Typography variant="h4" pb="0.5rem">
+          CADASTRO ATENDENTE
         </Typography>
       <form method='POST'>
      <Container>
@@ -62,6 +65,7 @@ export const SignInPage = () => {
         label="Selecione seu sexo">
           <MenuItem value={"masculino"}>Masculino</MenuItem>
           <MenuItem value={"feminino"}>Feminino</MenuItem>
+          <MenuItem value={"notinformed"}>Prefiro não dizer</MenuItem>
         </Select>
         </Container>
         <Container>
@@ -136,7 +140,7 @@ export const SignInPage = () => {
           title="Senha deve possuir ao menos 6 caracteres"/>
         </Container>
         <Flex justify="center" align="center" m={"1rem"}>
-        <Button type={"submit"} variant="contained">Cadastrar</Button>
+        <Button type={"submit"} variant="contained" onClick={()=>goToLoginPage(navigate)}>Cadastrar</Button>
         </Flex>
       </form>
     </Contained>

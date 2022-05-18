@@ -4,8 +4,20 @@ export const goToLoginPage=(navigate)=>{
 export const goToHomePage=(navigate)=>{
 	navigate("/home")
 }
-export const goSignInPage=(navigate)=>{
-	navigate("/sign")
+export const goToRegisterClient=(navigate)=>{
+	navigate("/registerClient")
+}
+export const goToRegisterAttendant=(navigate)=>{
+	navigate("/registerAttendant")
+}
+export const goToRegisterRestaurant=(navigate)=>{
+	navigate("/registerRestaurant")
+}
+export const goToNewPasswordPage=(navigate)=>{
+	navigate("/newpassword")
+}
+export const goToVerifyEmailPage=(navigate)=>{
+	navigate("/verifyemail")
 }
 export const goToProfilePage=(navigate)=>{
 	navigate("/profile")

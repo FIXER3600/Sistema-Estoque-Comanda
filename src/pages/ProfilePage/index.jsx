@@ -25,7 +25,7 @@ export const ProfilePage = () => {
           <AddressDiv>
             <div>
             <AddressTitle>Endereço Cadastrado</AddressTitle>
-            <img src={Edit} onClick={() => goToEditAdressPage(navigate)} />
+            <img src={Edit} onClick={() => goToEditProfilePage(navigate)} />
             </div>
             <p>Rua Qualquer</p>
           </AddressDiv>

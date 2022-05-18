@@ -59,13 +59,14 @@ export const LoginPage = () => {
           pattern="^.{6,}"
           title="Senha deve possuir ao menos 6 caracteres"/>
           </div>
-        <Flex justify="center" align="center" m={"2rem"}>
+        <Flex justify="center" align="center" m={"1rem"}>
         <Button variant="contained" onClick={()=>goToHomePage(navigate)}>Entrar</Button>
         </Flex>
+        <Text>Esqueceu a senha? <a href="/forgotpassword">Clique aqui!</a></Text>
       </form>
       <div>
         <p>
-          Não possui cadastro? <a href="/sign">Cadastre-se</a>
+          Não possui cadastro? <a href="/registerClient">Cadastre-se</a>
         </p>
       </div>
     </Contained>
