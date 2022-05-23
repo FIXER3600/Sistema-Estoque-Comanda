@@ -3,7 +3,7 @@ import { GlobalStorage } from "../GlobalContext"
 import { CommandPage } from "../pages/CommandPage"
 import { EditProfilePage } from "../pages/EditProfilePage"
 import { FinishRequestPage } from "../pages/FinishRequestPage"
-import { HomePage } from "../pages/HomePage"
+import { HomePage } from "../pages/HomePageClient"
 import { InitialPage } from "../pages/InitialPage"
 import { LoginPage } from "../pages/LoginPage"
 import { ProfilePage } from "../pages/ProfilePage"
@@ -14,6 +14,9 @@ import { RegisterRestaurant } from "../pages/RegisterRestaurant"
 import ForgotPasswordPage from "../pages/ForgotPasswordPage"
 import NewPasswordPage from "../pages/NewPasswordPage"
 import VerifyEmailPage from "../pages/VerifyEmailPage"
+import { HomePageAttendant } from "../pages/HomePageAttendant"
+import { HomePageRestaurant } from "../pages/HomePageRestaurant"
+import { RegisterProduct } from "../pages/RegisterProduct"
 
 const AppRoutes=()=>{
 	return(
@@ -26,9 +29,12 @@ const AppRoutes=()=>{
 			<Route path="/newpassword" element={<NewPasswordPage/>}/>
 			<Route path="/verifyemail" element={<VerifyEmailPage/>}/>
 			<Route path="/home" element={<HomePage/>}/>
+			<Route path="/homeAttendant" element={<HomePageAttendant/>}/>
+			<Route path="/homeRestaurant" element={<HomePageRestaurant/>}/>
 			<Route path="/registerClient" element={<RegisterClient/>}/>
 			<Route path="/registerAttendant" element={<RegisterAttendant/>}/>
 			<Route path="/registerRestaurant" element={<RegisterRestaurant/>}/>
+			<Route path="/registerProduct" element={<RegisterProduct/>}/>
 			<Route path="/profile" element={<ProfilePage/>}/>
 			<Route path="/profile/edit" element={<EditProfilePage/>}/>
 			<Route path="/command" element={<CommandPage/>}/>

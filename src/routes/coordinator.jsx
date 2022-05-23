@@ -34,5 +34,7 @@ export const goToFinishReqPage=(navigate)=>{
 export const goToRequestPage=(navigate)=>{
 	navigate("/request")
 }
-
+export const goToRestaurantPage=(navigate,id)=>{
+	navigate(`/restaurant/${id}`)
+}
 
