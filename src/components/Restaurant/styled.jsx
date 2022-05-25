@@ -1,5 +1,4 @@
-import styled from "styled-components"
-
+import styled from "styled-components";
 
 export const Container = styled.div`
   width: 20.5rem;
@@ -7,6 +6,7 @@ export const Container = styled.div`
   margin-top: 4rem;
   border-radius: 8px;
   border: 1px solid rgb(184, 184, 184);
+  cursor: pointer;
   img {
     width: 20.5rem;
     height: 7.5rem;
@@ -28,7 +28,7 @@ export const Container = styled.div`
     letter-spacing: -0.39px;
     color: red;
   }
-`
+`;
 
 export const ContainerDetails = styled.div`
   display: flex;
@@ -42,7 +42,7 @@ export const ContainerDetails = styled.div`
     letter-spacing: -0.39px;
     color: rgb(184, 184, 184);
   }
-`
+`;
 
 export const ShippingText = styled.span`
   font-family: "Roboto";
@@ -54,4 +54,4 @@ export const ShippingText = styled.span`
   letter-spacing: -0.39px;
   color: grey;
   text-align: end;
-`
+`;

@@ -1,21 +1,33 @@
-import React from 'react'
-import { Header } from '../../components/Header'
-import { AddressDiv, AddressTitle, Container, CPF, DatesDiv, Email, HistoryDiv, HistoryTitle, Path, ProfileDetails, UserImg, UserName } from './styled'
-import Edit from "../../assets/edit.png"
-import User from "../../assets/profile.png"
-import { useNavigate } from 'react-router-dom'
-import { goToEditProfilePage } from '../../routes/coordinator'
+import React from "react";
+import { Header } from "../../components/Header";
+import {
+  AddressDiv,
+  AddressTitle,
+  Container,
+  CPF,
+  DatesDiv,
+  Email,
+  HistoryDiv,
+  HistoryTitle,
+  Path,
+  ProfileDetails,
+  UserImg,
+  UserName
+} from "./styled";
+import Edit from "../../assets/edit.png";
+import User from "../../assets/profile.png";
+import { useNavigate } from "react-router-dom";
+import { goToEditProfilePage } from "../../routes/coordinator";
 export const ProfilePage = () => {
   const navigate = useNavigate();
   return (
     <div>
-    <Container>
-      <Header />
-   
+      <Container>
+        <Header />
+
         <ProfileDetails>
-        <UserImg src={User}/>
+          <UserImg src={User} />
           <DatesDiv>
-          
             <UserName>Vinicius</UserName>
             <img src={Edit} onClick={() => goToEditProfilePage(navigate)} />
           </DatesDiv>
@@ -24,8 +36,8 @@ export const ProfilePage = () => {
           <CPF>XXX.XXX.XXX-XX</CPF>
           <AddressDiv>
             <div>
-            <AddressTitle>Endereço Cadastrado</AddressTitle>
-            <img src={Edit} onClick={() => goToEditProfilePage(navigate)} />
+              <AddressTitle>Endereço Cadastrado</AddressTitle>
+              <img src={Edit} onClick={() => goToEditProfilePage(navigate)} />
             </div>
             <p>Rua Qualquer</p>
           </AddressDiv>
@@ -34,17 +46,14 @@ export const ProfilePage = () => {
             <HistoryTitle>Histórico de Pedidos</HistoryTitle>
             <Path></Path>
             <HistoryDiv>
-         {  /*   <History>
+              {/*   <History>
                  Você não realizou nenhum pedido
               </History>
 */}
-          </HistoryDiv>
-        
+            </HistoryDiv>
           </div>
-          
         </ProfileDetails>
-     
-    </Container>
+      </Container>
     </div>
-  )
-}
+  );
+};
