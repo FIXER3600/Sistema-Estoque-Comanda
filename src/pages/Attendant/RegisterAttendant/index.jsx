@@ -2,8 +2,8 @@ import { Container, Flex, Text } from '@chakra-ui/react';
 import { Button, MenuItem, Select, Typography } from '@mui/material';
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import useForm from '../../hooks/useForm';
-import { goToLoginPage } from '../../routes/coordinator';
+import useForm from '../../../hooks/useForm';
+import { goToLoginPage } from '../../../routes/coordinator';
 import { Contained, StyledInput } from './styled';
 
 export const RegisterAttendant = () => {

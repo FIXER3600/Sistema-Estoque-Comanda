@@ -1,14 +1,16 @@
 import { Container, Flex, Text } from '@chakra-ui/react';
-import { Button, Typography } from '@mui/material';
+import { Button,  MenuItem, Select, Typography } from '@mui/material';
 import React from 'react'
-import useForm from '../../hooks/useForm';
+import useForm from '../../../hooks/useForm';
+
 import { Contained, StyledInput } from './styled';
 
-export const RegisterProduct = () => {
+export const RegisterRestaurant = () => {
   const { form, onChangeForm, errors, setErrors, span, setSpan } = useForm({
     nome: "",
-    preco:0,
-    quantity:0,
+    endereco:"",
+    cnpj:"",
+    categoria: "",
     imgURL:""
   });
   return (
@@ -17,7 +19,7 @@ export const RegisterProduct = () => {
     align="center"
     minH="100vh">
       <Typography variant="h4" p="0.5rem">
-          CADASTRO DE PRODUTO
+          CADASTRO DE RESTAURANTE
         </Typography>
       <form method='POST'>
      <Container>
@@ -31,43 +33,41 @@ export const RegisterProduct = () => {
         size="md"
         w="30rem"
         p="0.5rem"
-        placeholder='Digite o Nome do Produto'
+        placeholder='Digite o Nome do Restaurante'
         autoComplete="name"/>
         </Container>
         <Container>
-        <Text>Preço</Text>
+        <Text>Endereço</Text>
         <StyledInput 
-        type={"number"} 
-	min="0"
-        name={"preco"} 
+        type={"text"} 
+        name={"endereco"} 
         required 
-        value={form.preco} 
+        value={form.endereco} 
         onChange={onChangeForm}
         size="md"
         w="30rem"
         p="0.5rem"
+        
         placeholder='Digite o Logradouro'/>
         </Container>
         <Container>
-        <Text>Quantidade</Text>
+        <Text>CNPJ</Text>
 	<StyledInput 
-        type={"number"} 
-        name={"quantity"} 
-	min="0"
+        type={"text"} 
+        name={"cnpj"} 
         required 
-        value={form.quantity} 
+        value={form.cnpj} 
         onChange={onChangeForm}
         size="md"
         w="30rem"
         p="0.5rem"
-        placeholder='Digite a Quantidade no estoque'/>
+        placeholder='Digite o CNPJ'/>
         </Container>
-	<Container>
+        <Container>
         <Text>Image URL (opcional)</Text>
         <StyledInput 
         type={"text"} 
         name={"imgURL"} 
-        required 
         value={form.imgURL} 
         onChange={onChangeForm}
         size="md"
@@ -76,7 +76,24 @@ export const RegisterProduct = () => {
         placeholder='Digite a URL da imagem do produto'
         />
         </Container>
-	<Flex justify="center" align="center" m={"1rem"}>
+        <Container>
+        <Text>Categoria</Text>
+        <Select autoWidth={true} 
+        onChange={onChangeForm} 
+        name={"categoria"} 
+        value={form.categoria} 
+        required 
+        label="Selecione seu sexo">
+          <MenuItem value={"pizzaria"}>Pizzaria</MenuItem>
+          <MenuItem value={"japones"}>Restaurante Japonês</MenuItem>
+          <MenuItem value={"arabe"}>Restaurante Árabe</MenuItem>
+          <MenuItem value={"mexicano"}>Restaurante Mexicano</MenuItem>
+          <MenuItem value={"lanchonete"}>Lanchonete</MenuItem>
+          <MenuItem value={"padaria"}>Padaria</MenuItem>
+          <MenuItem value={"doceria"}>Doceria</MenuItem>
+        </Select>
+        </Container>
+        <Flex justify="center" align="center" m={"1rem"}>
         <Button type={"submit"} variant="contained">Cadastrar</Button>
         </Flex>
       </form>

@@ -31,10 +31,13 @@ export const goToCommandPage=(navigate)=>{
 export const goToFinishReqPage=(navigate)=>{
 	navigate("/finishrequest")
 }
-export const goToRequestPage=(navigate)=>{
-	navigate("/request")
+export const goToOrderDetailsPage=(navigate)=>{
+	navigate(`/order`)
 }
-export const goToRestaurantPage=(navigate,id)=>{
-	navigate(`/restaurant/${id}`)
+export const goToAttendantDetailsPage=(navigate)=>{
+	navigate(`/attendant`)
+}
+export const goToRestaurantDetailsPage=(navigate)=>{
+	navigate(`/restaurant`)
 }
 
