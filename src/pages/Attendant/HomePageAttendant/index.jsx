@@ -1,12 +1,12 @@
 import React from 'react'
-import { Header } from '../../components/Header'
-import { Order } from '../../components/Order'
+import { HeaderAttendant } from '../../../components/Header/HeaderAttendant'
+import Order from "../../../components/Order"
 import { Container } from './styled'
 
 export const HomePageAttendant = () => {
   return (
     <Container>
-      <Header/>
+     <HeaderAttendant/>
       <Order/>
       <Order/>
       <Order/>

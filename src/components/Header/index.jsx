@@ -28,7 +28,11 @@ export const Header = () => {
                 Home
               </a>
             </li>
-
+            <li>
+              <a className="nav-item" href="/cart">
+                Carrinho
+              </a>
+            </li>
             <li>
               <a className="nav-item" href="/profile">
                 Perfil

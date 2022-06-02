@@ -1,22 +1,22 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { GlobalStorage } from "../GlobalContext"
-import { CommandPage } from "../pages/CommandPage"
 import { EditProfilePage } from "../pages/EditProfilePage"
-import { FinishRequestPage } from "../pages/FinishRequestPage"
-import { HomePage } from "../pages/HomePageClient"
+import { HomePage } from "../pages/Client/HomePageClient"
 import { InitialPage } from "../pages/InitialPage"
 import { LoginPage } from "../pages/LoginPage"
 import { ProfilePage } from "../pages/ProfilePage"
-import { RegisterAttendant } from "../pages/RegisterAttendant"
-import { RequestPage } from "../pages/RequestPage"
-import { RegisterClient } from "../pages/RegisterClient"
-import { RegisterRestaurant } from "../pages/RegisterRestaurant"
+import { RegisterAttendant } from "../pages/Attendant/RegisterAttendant"
+import { RegisterClient } from "../pages/Client/RegisterClient"
+import { RegisterRestaurant } from "../pages/Restaurant/RegisterRestaurant"
 import ForgotPasswordPage from "../pages/ForgotPasswordPage"
 import NewPasswordPage from "../pages/NewPasswordPage"
 import VerifyEmailPage from "../pages/VerifyEmailPage"
-import { HomePageAttendant } from "../pages/HomePageAttendant"
-import { HomePageRestaurant } from "../pages/HomePageRestaurant"
-import { RegisterProduct } from "../pages/RegisterProduct"
+import { HomePageAttendant } from "../pages/Attendant/HomePageAttendant"
+import { HomePageRestaurant } from "../pages/Restaurant/HomePageRestaurant"
+import { RegisterProduct } from "../pages/Product/RegisterProduct"
+import { AttendantDetailsPage } from "../pages/Attendant/AttendantDetailsPage"
+import { OrderPage } from "../pages/Order/OrderPage"
+import { RestaurantPage } from "../pages/Restaurant/RestaurantPage"
 
 const AppRoutes=()=>{
 	return(
@@ -37,9 +37,9 @@ const AppRoutes=()=>{
 			<Route path="/registerProduct" element={<RegisterProduct/>}/>
 			<Route path="/profile" element={<ProfilePage/>}/>
 			<Route path="/profile/edit" element={<EditProfilePage/>}/>
-			<Route path="/command" element={<CommandPage/>}/>
-			<Route path="/finishrequest" element={<FinishRequestPage/>}/>
-			<Route path="/request" element={<RequestPage/>}/>
+			<Route path="/order" element={<OrderPage/>}/>
+			<Route path="/attendant" element={<AttendantDetailsPage/>}/>
+			<Route path="/restaurant" element={<RestaurantPage/>}/>
 		</Routes>
 		</GlobalStorage>
 		</BrowserRouter>

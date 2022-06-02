@@ -3,7 +3,7 @@ import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { ContainerHeader } from "./styled";
 import "./menu.css";
-export const Header = () => {
+export const HeaderAttendant = () => {
   const page = () => {
     if (window.location.pathname === "/" || "/login" || "/home" || "/sigin") {
       return "";
