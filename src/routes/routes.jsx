@@ -17,6 +17,7 @@ import { RegisterProduct } from "../pages/Product/RegisterProduct";
 import { AttendantDetailsPage } from "../pages/Attendant/AttendantDetailsPage";
 import { RestaurantDetailsPage } from "../pages/Restaurant/RestaurantDetailsPage";
 import { OrderDetailsPage } from "../pages/Order/OrderDetailsPage";
+import { CartPage } from "../pages/Client/CartPage";
 
 const AppRoutes = () => {
   return (
@@ -40,6 +41,7 @@ const AppRoutes = () => {
           <Route path="/order" element={<OrderDetailsPage />} />
           <Route path="/attendant" element={<AttendantDetailsPage />} />
           <Route path="/restaurant" element={<RestaurantDetailsPage />} />
+          <Route path="/cart" element={<CartPage/>} />
         </Routes>
       </GlobalStorage>
     </BrowserRouter>
