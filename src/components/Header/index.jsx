@@ -1,9 +1,11 @@
 import { IconButton, InputAdornment, TextField } from "@mui/material";
-import React from "react";
+import { React } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { ContainerHeader } from "./styled";
+
 import "./menu.css";
-export const Header = () => {
+
+export const Header = ({ searchBar, handleSearch }) => {
   const page = () => {
     if (window.location.pathname === "/" || "/login" || "/home" || "/sigin") {
       return "";
@@ -44,6 +46,9 @@ export const Header = () => {
         {window.location.pathname === "/home" ? (
           <TextField
             label="Busque o restaurante"
+            value={searchBar}
+            onChange={handleSearch}
+            type="search"
             InputProps={{
               endAdornment: (
                 <InputAdornment>

@@ -1,24 +1,19 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import { goToRestaurantDetailsPage } from '../../routes/coordinator'
-import { Container, ContainerDetails, ShippingText } from './styled'
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { goToRestaurantDetailsPage } from "../../routes/coordinator";
+import { Container, ContainerDetails, ShippingText } from "./styled";
 
-export const Restaurant = () => {
-	const navigate = useNavigate()
+export const Restaurant = ({ restaurantImg, name, category, address }) => {
+  const navigate = useNavigate();
 
-	return (
-	  <Container onClick={() => goToRestaurantDetailsPage(navigate)}>
-	    <img src={"https://s3.amazonaws.com/gupy5/production/socialmedias/10499/a47ac69595f7b82d74da0505286e0b68_logo.png"} alt="Logo Restaurante" />
-	    <span>Habibs</span>
-	    <ContainerDetails>
-	      <span>
-		45 min
-	      </span>
-	      <ShippingText>
-		Frete R$
-		15.00
-	      </ShippingText>
-	    </ContainerDetails>
-	  </Container>
-	)
-}
+  return (
+    <Container onClick={() => goToRestaurantDetailsPage(navigate)}>
+      <img src={restaurantImg} alt="Logo Restaurante" />
+      <span>{name}</span>
+      <ContainerDetails>
+        <span>{category}</span>
+        <ShippingText>{address}</ShippingText>
+      </ContainerDetails>
+    </Container>
+  );
+};

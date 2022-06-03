@@ -6,7 +6,7 @@ import {
       import React from "react"
       import { useParams } from "react-router-dom"
 import { AttendantCardDetails } from "../../../components/AttendantCardDetails"
-import { HeaderAttendant } from "../../../components/Header/HeaderAttendant"
+import { HeaderRestaurant } from "../../../components/Header/HeaderRestaurant"
 
    
       import {
@@ -21,7 +21,7 @@ export const AttendantDetailsPage = () => {
 	const params=useParams()
 	return (
 		<div>
-		  <HeaderAttendant/>
+		  <HeaderRestaurant/>
 		
 		   <ContainerRestaurantsDetails>
 		   <AttendantCardDetails
