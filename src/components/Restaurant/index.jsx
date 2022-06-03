@@ -3,16 +3,16 @@ import { useNavigate } from "react-router-dom";
 import { goToRestaurantDetailsPage } from "../../routes/coordinator";
 import { Container, ContainerDetails, ShippingText } from "./styled";
 
-export const Restaurant = ({ restaurantImg, name, category, address }) => {
+export const Restaurant = ({ restaurant }) => {
   const navigate = useNavigate();
 
   return (
     <Container onClick={() => goToRestaurantDetailsPage(navigate)}>
-      <img src={restaurantImg} alt="Logo Restaurante" />
-      <span>{name}</span>
+      <img src={restaurant.logoUrl} alt="Logo Restaurante" />
+      <span>{restaurant.name}</span>
       <ContainerDetails>
-        <span>{category}</span>
-        <ShippingText>{address}</ShippingText>
+        <span>{restaurant.category}</span>
+        <ShippingText>{restaurant.address}</ShippingText>
       </ContainerDetails>
     </Container>
   );

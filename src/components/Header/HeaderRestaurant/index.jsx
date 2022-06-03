@@ -3,7 +3,7 @@ import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { ContainerHeader } from "./styled";
 import "./menu.css";
-export const HeaderRestaurant = () => {
+export const HeaderRestaurant = ({ searchBar, handleSearch }) => {
   const page = () => {
     if (window.location.pathname === "/" || "/login" || "/home" || "/sigin") {
       return "";
@@ -40,6 +40,9 @@ export const HeaderRestaurant = () => {
         {window.location.pathname === "/homeRestaurant" ? (
           <TextField
             label="Busque o atendente"
+            value={searchBar}
+            onChange={handleSearch}
+            type="search"
             InputProps={{
               endAdornment: (
                 <InputAdornment>
@@ -47,7 +50,7 @@ export const HeaderRestaurant = () => {
                     <SearchIcon />
                   </IconButton>
                 </InputAdornment>
-              )
+              ),
             }}
           />
         ) : (

@@ -1,0 +1,30 @@
+export const orderList=[
+	{
+		id:0,
+		orderImg:"https://img.itdg.com.br/tdg/images/recipes/000/194/267/288427/288427_original.jpg?mode=crop&width=710&height=400",
+		number:1,
+		status:"Ativado",
+		quantity:10
+	},
+	{
+		id:1,
+		orderImg:"https://claudia.abril.com.br/wp-content/uploads/2016/10/receita-assado-costelas-batatas.jpg?quality=85&strip=info&w=620",
+		number:2,
+		status:"Desativado",
+		quantity:1
+	},
+	{
+		id:2,
+		orderImg:"https://images-americanas.b2w.io/produtos/1830216441/imagens/mclanche-feliz-cheeseburger-com-batata-agua-danoninho-e-brinquedo-sortido/1830216450_1_large.jpg",
+		number:3,
+		status:"Ativado",
+		quantity:2
+	},
+	{
+		id:3,
+		orderImg:"https://media-cdn.tripadvisor.com/media/photo-s/1c/cd/4e/65/kotay-sushi.jpg",
+		number:4,
+		status:"Desativado",
+		quantity:0
+	}
+]
