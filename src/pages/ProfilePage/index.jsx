@@ -28,7 +28,7 @@ export const ProfilePage = () => {
         <ProfileDetails>
           <UserImg src={User} />
           <DatesDiv>
-            <UserName>Vinicius</UserName>
+            <UserName>Usuário</UserName>
             <img src={Edit} onClick={() => goToEditProfilePage(navigate)} />
           </DatesDiv>
           <Email>lorem@ipsum.com</Email>

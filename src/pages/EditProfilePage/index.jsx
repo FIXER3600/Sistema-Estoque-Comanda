@@ -25,7 +25,7 @@ export const EditProfilePage = () => {
         <ProfileDetails>
           <UserImg src={User} />
           <DatesDiv>
-            <UserName>Vinicius</UserName>
+            <UserName>Usuário</UserName>
           </DatesDiv>
           <DivEmail>
             <p>Email*</p>
