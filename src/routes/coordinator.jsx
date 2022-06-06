@@ -31,13 +31,18 @@ export const goToCommandPage=(navigate)=>{
 export const goToFinishReqPage=(navigate)=>{
 	navigate("/finishrequest")
 }
-export const goToOrderDetailsPage=(navigate)=>{
-	navigate(`/order`)
+export const goToOrderDetailsPage=(navigate,id)=>{
+	navigate(`/order/${id}`)
 }
-export const goToAttendantDetailsPage=(navigate)=>{
-	navigate(`/attendant`)
+export const goToAttendantDetailsPage=(navigate,id)=>{
+	navigate(`/attendant/${id}`)
 }
-export const goToRestaurantDetailsPage=(navigate)=>{
-	navigate(`/restaurant`)
+export const goToRestaurantDetailsPage=(navigate,id)=>{
+	navigate(`/restaurant/${id}`)
 }
-
+export const goToProductDetailsPage=(navigate,id)=>{
+	navigate(`/product/${id}`)
+}
+export const goToProductEditPage=(navigate,id)=>{
+	navigate(`/product/edit/${id}`)
+}

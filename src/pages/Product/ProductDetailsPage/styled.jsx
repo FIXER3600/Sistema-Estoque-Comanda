@@ -1,6 +1,27 @@
 import { Button } from "@mui/material"
 import styled from "styled-components"
-import { neutralColor } from "../../../constants/colors"
+import { neutralColor, primaryColor } from "../../../constants/colors"
+
+export const ContainerRestaurantsDetails = styled.div`
+  margin: 64px 0 1rem 0;
+`
+
+export const ContainerProductCategory = styled.div`
+  margin: 1rem 1rem 0.5rem;
+  h2 {
+    height: 1.125rem;
+    font-family: "Roboto";
+    font-size: 1rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.39px;
+    border-bottom: 1px solid;
+    padding-bottom: 0.5rem;
+  }
+`
+
 export const ContainerModal = styled.div`
   display: ${({ open }) => (open ? "flex" : "none")};
   justify-content: center;
@@ -24,6 +45,7 @@ export const ModalSelect = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  
   p {
     width: 18.5rem;
     height: 1.125rem;
@@ -39,6 +61,18 @@ export const ModalSelect = styled.div`
     color: ${neutralColor};
   }
 `
-export const StyledButton = styled(Button) `
-    align-self: flex-end;
+
+
+export const StyledButton = styled.button`
+  width: 100%;
+  padding: 1rem;
+ 
+  display: block;
+  font-weight: bold;
+  border: none;
+  border-radius: 2px;
+  background-color: ${(props) =>
+    props.desabilitado ? "rgba(232, 34, 46, 0.5)" : primaryColor};
+  cursor: pointer;
+  margin: 20px 0;
 `

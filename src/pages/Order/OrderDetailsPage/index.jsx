@@ -6,7 +6,9 @@ export const OrderDetailsPage = () => {
   return (
     <div>
       <HeaderAttendant />
+
       <OrderCardDetails />
+    
     </div>
   );
 };

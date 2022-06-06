@@ -1,59 +1,57 @@
-import React from 'react'
-import { Header } from '../../components/Header'
-import { AddressDiv, AddressTitle, Container, CPF, DatesDiv, DivCPF, DivEmail, DivTel, Email, HistoryDiv, HistoryTitle, Path, ProfileDetails, Tel, UserImg, UserName } from './styled'
-import User from "../../assets/profile.png"
-import { Button } from '@mui/material'
+import React from "react";
+import { Header } from "../../components/Header";
+import {
+  AddressDiv,
+  AddressTitle,
+  Container,
+  DatesDiv,
+  DivCPF,
+  DivEmail,
+  DivTel,
+  ProfileDetails,
+  UserImg,
+  UserName,
+} from "./styled";
+import User from "../../assets/profile.png";
+import { Flex } from "@chakra-ui/react";
+import { Button } from "@mui/material";
 export const EditProfilePage = () => {
   return (
     <div>
-      <Header/>
-      <Container>
       <Header />
-   
+      <Container>
+        <Header />
+
         <ProfileDetails>
-        <UserImg src={User}/>
+          <UserImg src={User} />
           <DatesDiv>
-          
             <UserName>Vinicius</UserName>
-       
           </DatesDiv>
           <DivEmail>
-          <p>Email*</p>
-          <Email>lorem@ipsum.com</Email>
+            <p>Email*</p>
+            <input type={"text"} />
           </DivEmail>
           <DivCPF>
-          <p>CPF*</p>
-          <CPF>XXX.XXX.XXX-XX</CPF>
-          </DivCPF>     
+            <p>CPF*</p>
+            <input type={"text"} />
+          </DivCPF>
           <DivTel>
-    <p>Telefone*</p>
-          <Tel>(XX) XXXXX-XXXX</Tel>
-    </DivTel>
+            <p>Telefone*</p>
+            <input type={"text"} />
+          </DivTel>
           <AddressDiv>
             <div>
-            <AddressTitle>Endereço Cadastrado</AddressTitle>
-          
+              <AddressTitle>Novo Endereço</AddressTitle>
             </div>
-            <p>Rua Qualquer</p>
+            <input type={"text"} />
           </AddressDiv>
-    
-          <div>
-            <HistoryTitle>Histórico de Pedidos</HistoryTitle>
-            <Path></Path>
-            <HistoryDiv>
-         {  /*   <History>
-                 Você não realizou nenhum pedido
-              </History>
-*/}
-          </HistoryDiv>
-        
-          </div>
-          <Button
-           type={"submit"}
-           variant="contained">Salvar</Button>
+<Flex justify="center" align="center" m={"1rem"}>
+          <Button type={"submit"} variant="contained">
+            Salvar
+          </Button>
+          </Flex>
         </ProfileDetails>
-    
-    </Container>
+      </Container>
     </div>
-  )
-}
+  );
+};

@@ -1,34 +1,27 @@
-import { Container, Flex, Text } from '@chakra-ui/react';
-import { Button, Typography } from '@mui/material';
+import { Container, Flex, Text } from '@chakra-ui/react'
+import { Button, Typography } from '@mui/material'
 import React from 'react'
-import useForm from '../../../hooks/useForm';
+import { HeaderRestaurant } from '../../../components/Header/HeaderRestaurant'
+import { Contained, StyledInput } from './styled'
 
-import { Contained, StyledInput } from './styled';
-
-export const RegisterProduct = () => {
-  const { form, onChangeForm, errors, setErrors, span, setSpan } = useForm({
-    nome: "",
-    preco:0,
-    quantity:0,
-    imgURL:""
-  });
+export const ProductEditPage = () => {
   return (
-    <Contained  justify="center"
+    <div>
+	  <HeaderRestaurant/>  
+	  <Contained  justify="center"
     direction="column"
     align="center"
     minH="100vh">
       <Typography variant="h4" p="0.5rem">
-          CADASTRO DE PRODUTO
+          EDITAR PRODUTO
         </Typography>
-      <form method='POST'>
+      <form method='PUT'>
      <Container>
         <Text>Nome</Text>
         <StyledInput 
         type={"text"} 
         name={"nome"} 
         required 
-        value={form.nome} 
-        onChange={onChangeForm}
         size="md"
         w="30rem"
         p="0.5rem"
@@ -42,8 +35,6 @@ export const RegisterProduct = () => {
 	min="0"
         name={"preco"} 
         required 
-        value={form.preco} 
-        onChange={onChangeForm}
         size="md"
         w="30rem"
         p="0.5rem"
@@ -56,26 +47,10 @@ export const RegisterProduct = () => {
         name={"quantity"} 
 	min="0"
         required 
-        value={form.quantity} 
-        onChange={onChangeForm}
         size="md"
         w="30rem"
         p="0.5rem"
         placeholder='Digite a Quantidade no estoque'/>
-        </Container>
-        <Container>
-        <Text>Restaurante</Text>
-        <StyledInput 
-        type={"text"} 
-        name={"restaurant"} 
-        required 
-        value={form.restaurant} 
-        onChange={onChangeForm}
-        size="md"
-        w="30rem"
-        p="0.5rem"
-        placeholder='Digite o Restaurante do Produto'
-        autoComplete="name"/>
         </Container>
 	<Container>
         <Text>Image URL (opcional)</Text>
@@ -83,8 +58,6 @@ export const RegisterProduct = () => {
         type={"text"} 
         name={"imgURL"} 
         required 
-        value={form.imgURL} 
-        onChange={onChangeForm}
         size="md"
         w="30rem"
         p="0.5rem"
@@ -92,9 +65,11 @@ export const RegisterProduct = () => {
         />
         </Container>
 	<Flex justify="center" align="center" m={"1rem"}>
-        <Button type={"submit"} variant="contained">Cadastrar</Button>
+        <Button type={"submit"} variant="contained">Editar</Button>
         </Flex>
       </form>
     </Contained>
+
+	</div>
   )
 }

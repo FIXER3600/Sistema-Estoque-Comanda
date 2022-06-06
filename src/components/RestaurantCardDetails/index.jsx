@@ -1,4 +1,6 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import restaurants from "../../pages/Restaurant/restaurantList";
 import {
 	Address,
   Category,
@@ -9,33 +11,31 @@ import {
   Name
 } from "./styled";
 
-export const RestaurantCardDetails = ({
-  logoUrl,
-  name,
-  category,
-  deliveryTime,
-  shipping,
-  address,
-}) => {
+export const RestaurantCardDetails = () => {
+  const param=useParams()
+	const findRestaurant=()=>{
+	  return restaurants.find((restaurant)=>restaurant.id==param.id)
+	}
+ 
   return (
     <div>
       {" "}
       <ContainerDetails>
-        <Img src={logoUrl} alt="Logo Restaurante" />
+        <Img src={findRestaurant().logoUrl} alt="Logo Restaurante" />
         <Container>
-          <Name>{name}</Name>
-          <Category>{category}</Category>
+          <Name>{findRestaurant().name}</Name>
+          <Category>{findRestaurant().category}</Category>
           <ContainerNumb>
        
               <p>
-                {Math.floor(deliveryTime * 0.9)} - {deliveryTime} min
+                {Math.floor(findRestaurant().deliveryTime * 0.9)} - {findRestaurant().deliveryTime} min
               </p>
 	      <p>
               Frete R$
-              {Number(shipping).toFixed(2)}
+              {Number(findRestaurant().shipping).toFixed(2)}
 	      </p>
           </ContainerNumb>
-          <Address>{address}</Address>
+          <Address>{findRestaurant().address}</Address>
         </Container>
       </ContainerDetails>
     </div>

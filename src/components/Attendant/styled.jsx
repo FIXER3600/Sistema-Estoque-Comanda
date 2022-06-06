@@ -9,7 +9,7 @@ export const Container = styled.div`
   cursor: pointer;
   img {
     width: 20.5rem;
-    height: 7.5rem;
+    height: auto;
     margin: 0 0 0.75rem;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;

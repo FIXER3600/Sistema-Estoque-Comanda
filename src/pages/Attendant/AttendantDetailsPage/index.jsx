@@ -17,20 +17,13 @@ import { HeaderRestaurant } from "../../../components/Header/HeaderRestaurant"
 	StyledButton,
       } from "./styled"
 
-export const AttendantDetailsPage = () => {
-	const params=useParams()
+export const AttendantDetailsPage = ({}) => {
 	return (
 		<div>
 		  <HeaderRestaurant/>
 		
 		   <ContainerRestaurantsDetails>
 		   <AttendantCardDetails
-		     profileImg={"https://pbs.twimg.com/media/FRNJDvQWQAAfeWw.jpg"}
-		     name={"Toguro"}
-		     role={"atendente"}
-		     gender={"masculino"}
-		     age={"27"}
-		     cpf={"222.222.222-52"}
 		   />
 		 </ContainerRestaurantsDetails>
 		
