@@ -32,13 +32,17 @@ console.log(product);
   return (
     
     <ContainerProduct >
-      <img src={product[0]?.img} alt="Imagem do produto" />
+      <img src={product.img} alt="Imagem do produto" />
       <ContainerDetails>
-        <h3>{product[0]?.name}</h3>
-        <p>{product[0]?.description}</p>
-        <span>R$ {Number(product[0]?.price).toFixed(2)}</span>
+        <h3>{product.name}</h3>
+        <p>{product.description}</p>
+        <span>R$ {Number(product.price).toFixed(2)}</span>
         
-        <button onClick={() => openModal()}>remover</button>
+        <button onClick={() => openModal()}>
+          {window.location.pathname === "/cart"? "Remover":"Adicionar"}
+          
+          
+          </button>
      
       </ContainerDetails>
     </ContainerProduct>

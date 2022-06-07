@@ -1,4 +1,5 @@
-import React from "react";
+import { Select } from "@chakra-ui/react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { created } from "../../../app/orders/orderSlice";
 import { HeaderAttendant } from "../../../components/Header/HeaderAttendant";
@@ -7,30 +8,50 @@ import Order from "../../../components/Order";
 import { Container } from "./styled";
 
 export const HomePageAttendant = () => {
-  const dispatch = useDispatch();
-  //const {order,setOrder}=useContext(GlobalStorage)
+  const [sortingParameter, setSortingParameter] = useState("");
+  const [searchBar,setSearchBar]=useState("")
+  const handleSearch = ({ target }) => {
+    setSearchBar(target.value);
+  };
+  const updateSortingParameter = ({ target }) => {
+    setSortingParameter(target.value);
+  };
   const orders = useSelector((state) => state.order);
+ const orderList= orders.map((order) => (
+    <Order order={order} />
+  )).sort((currentOrder, nextOrder) => {
+    switch (sortingParameter) {
+      case "Mais Recentes":
+        console.log(nextOrder.props);
+        return currentOrder.props.order.duration - nextOrder.props.order.duration;
+      case "Mais Antigos":
+        return nextOrder.props.order.duration - currentOrder.props.order.duration;
+      }
+    })
+    const filterByName=()=>{
+    const orderByName=orderList.filter(({props})=>{
+  
+      return props.order.name?.toLowerCase()
+      .includes(searchBar.toLowerCase());
+    })
+    return orderByName
+    }
   return (
     <Container>
-      <HeaderAttendant />
-      {orders.map((order) => (
-        <Order order={order} />
-      ))}
-      <button
-        onClick={() =>
-          dispatch(
-            created({
-              id: orders.length+1,
-              img: "https://img.itdg.com.br/tdg/images/recipes/000/194/267/288427/288427_original.jpg?mode=crop&width=710&height=400",
-              number: 1,
-              status: "Ativado",
-              quantity: 10,
-            })
-          )
-        }
+      <HeaderAttendant searchBar={searchBar} handleSearch={handleSearch}/>
+      <Select
+      type="text"
+      size="md"
+      mt="4rem"
+      w="20rem"
+      placeholder="Ordenar por"
+      onChange={updateSortingParameter}
       >
-        Adicionar
-      </button>
+        <option value={"Mais Recentes"}>Mais Recentes</option>
+        <option value={"Mais Antigos"}>Mais Antigos</option>
+        </Select>
+      {searchBar!==""? filterByName(): orderList}
+     
     </Container>
   );
 };

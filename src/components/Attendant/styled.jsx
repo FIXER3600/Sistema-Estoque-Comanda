@@ -32,9 +32,11 @@ export const Container = styled.div`
 
 export const ContainerDetails = styled.div`
   display: flex;
+  height: auto;
   span {
     font-family: "Roboto";
     font-size: 1rem;
+    margin: 1rem;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;

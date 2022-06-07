@@ -43,6 +43,9 @@ export const goToRestaurantDetailsPage=(navigate,id)=>{
 export const goToProductDetailsPage=(navigate,id)=>{
 	navigate(`/product/${id}`)
 }
+export const goToRegisterProduct=(navigate)=>{
+	navigate('/registerProduct')
+}
 export const goToProductEditPage=(navigate,id)=>{
 	navigate(`/product/edit/${id}`)
 }

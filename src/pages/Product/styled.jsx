@@ -7,3 +7,9 @@ export const Container = styled.div`
   justify-content: center;
   margin-top: 3rem;
 `
+export const PlusIcon = styled.img`
+  width: 2em;
+  height: 2em;
+  padding: 2em;
+  cursor: pointer;
+`;

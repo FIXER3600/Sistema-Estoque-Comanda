@@ -13,10 +13,11 @@ import {
   Total,
   TotalPrice,
 } from "./styled";
-import restaurants from "../../Restaurant/restaurantList";
+
 import ProductCard from "../../../components/ProductCard";
+import { products } from "../../Product/productList";
 export const CartPage = () => {
-  const productsCart = restaurants[0]?.products?.map((product) => {
+  const productsCart = products?.map((product) => {
    
   return (  <ProductCard product={product} key={product.id} />)
   });
@@ -33,8 +34,8 @@ export const CartPage = () => {
           {productsCart}
           <Price>
             <TotalPrice>
-              <SubTotal>SUBTOTAL</SubTotal>
-              <Total> R$ 20.00</Total>
+              <SubTotal>TOTAL</SubTotal>
+              <Total> R$ 10.16</Total>
             </TotalPrice>
           </Price>
           <p>Forma de Pagamento</p>

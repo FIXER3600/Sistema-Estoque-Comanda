@@ -63,8 +63,8 @@ export const HomePageRestaurant = () => {
         w="20rem"
         placeholder="Atividade atual"
         onChange={handleOcupation}>
-        <option value="Ocupado">Ocupado</option>
-        <option value={"Desocupado"}>Desocupado</option>
+        <option value="Ocupado">Ocupado ⛔️</option>
+        <option value={"Desocupado"}>Desocupado ✅</option>
       </Select>
       <HeaderRestaurant searchBar={searchBar} handleSearch={handleSearch} />
       {ocupation !== "" ? filterByOcupation(): searchBar !== "" ? filterBySearch() : attendantsList}

@@ -17,6 +17,7 @@ export const DatesDiv = styled.div`
   margin-right: 1rem;
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 `
 
@@ -30,7 +31,7 @@ export const UserName = styled.span`
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.39px;
-  margin-left: 8.5rem;
+  margin-left: 2.5rem;
   
   
 `
@@ -82,7 +83,7 @@ export const Email = styled.span`
 export const DivEmail=styled.div`
 
 p{margin: 1rem;}
-input{margin-left:1rem}
+input{margin-left:1rem; margin-bottom:1rem}
 border-bottom: 0.1rem solid black;
 `
 export const DivCPF=styled.div`
@@ -126,3 +127,6 @@ export const Path = styled.div`
   border: solid 1px black;
 `
 
+export const Input=styled.input`
+display: none;
+`

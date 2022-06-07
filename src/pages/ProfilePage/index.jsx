@@ -18,12 +18,13 @@ import Edit from "../../assets/edit.png";
 import User from "../../assets/profile.png";
 import { useNavigate } from "react-router-dom";
 import { goToEditProfilePage } from "../../routes/coordinator";
+import { HeaderProfile } from "../../components/HeaderProfile";
 export const ProfilePage = () => {
   const navigate = useNavigate();
   return (
     <div>
       <Container>
-        <Header />
+        <HeaderProfile />
 
         <ProfileDetails>
           <UserImg src={User} />

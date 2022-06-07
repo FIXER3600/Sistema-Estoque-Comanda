@@ -7,7 +7,7 @@ export const attendantList = [
     age: 27,
     gender: "Masculino",
     cpf:"444.444.444-44",
-    status:"Ocupado",
+    status:"Ocupado ⛔️",
     rate:9
   },
   {
@@ -18,7 +18,7 @@ export const attendantList = [
     age: 24,
     gender: "Feminino",
     cpf:"555.555.555-55",
-    status:"Desocupado",
+    status:"Desocupado ✅",
     rate:6
   },
   {
@@ -29,7 +29,7 @@ export const attendantList = [
     age: 25,
     gender: "Masculino",
     cpf:"666.666.666-66",
-    status:"Desocupado",
+    status:"Desocupado ✅",
     rate:8
   },
   {
@@ -40,7 +40,7 @@ export const attendantList = [
     age: 31,
     gender: "Feminino",
     cpf:"777.777.777-77",
-    status:"Ocupado",
+    status:"Ocupado ⛔️",
     rate:7
   },
 ];

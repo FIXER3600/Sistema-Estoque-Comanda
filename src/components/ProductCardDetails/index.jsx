@@ -4,6 +4,7 @@ import { products } from '../../pages/Product/productList'
 import { goToProductEditPage } from '../../routes/coordinator'
 import { Address, Category, Container, ContainerDetails, ContainerNumb, Img, Name } from './styled'
 import Edit from "../../assets/edit.png";
+import { Flex } from '@chakra-ui/react'
 export const ProductCardDetails = () => {
 	const param=useParams()
 	const navigate=useNavigate()
@@ -13,15 +14,17 @@ export const ProductCardDetails = () => {
   return (
     <div> <ContainerDetails>
     <Img src={findProduct().img} alt="Imagem do Pedido" />
+    <Flex justifyContent={"flex-end"}>
     <img src={Edit} onClick={() => goToProductEditPage(navigate,param.id)} />
+    </Flex>
     <Container>
       <Name>{findProduct().name}</Name>
    
       <Category>R$ {findProduct().price}</Category>
       <ContainerNumb>
 	      <p>
-	 
-	  {findProduct().restaurant}
+        Restaurante: 
+	  {" "+ findProduct().restaurant}
 	</p>
 	
 	
@@ -29,7 +32,7 @@ export const ProductCardDetails = () => {
       <p>
 	  {findProduct().description}
 	</p>
-      <Address>{findProduct().quantity}</Address>
+      <Address>Quantidade em estoque: {findProduct().quantity}</Address>
     </Container>
   </ContainerDetails></div>
   )

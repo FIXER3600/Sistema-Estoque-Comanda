@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Header } from "../../components/Header";
 import {
   AddressDiv,
@@ -8,6 +8,7 @@ import {
   DivCPF,
   DivEmail,
   DivTel,
+  Input,
   ProfileDetails,
   UserImg,
   UserName,
@@ -15,17 +16,32 @@ import {
 import User from "../../assets/profile.png";
 import { Flex } from "@chakra-ui/react";
 import { Button } from "@mui/material";
+import Edit from "../../assets/edit.png"
+import { HeaderProfile } from "../../components/HeaderProfile";
 export const EditProfilePage = () => {
+  const [userImg,setUserImg]=useState(User);
+
+
+  const onChange = (e) => {
+    e.preventDefault()
+    const [file] = e.target.files;
+    setUserImg(URL.createObjectURL(file));
+  }
+
   return (
     <div>
-      <Header />
+      <HeaderProfile/>
       <Container>
         <Header />
 
         <ProfileDetails>
-          <UserImg src={User} />
+          <UserImg src={userImg} />
+         <label htmlFor='file'> <img src={Edit} /></label>
+    <Input type="file" id="file" name="file" onChange={onChange}/>
+
           <DatesDiv>
-            <UserName>Usuário</UserName>
+            <UserName>Usuário*</UserName>
+            <input type={"text"} />
           </DatesDiv>
           <DivEmail>
             <p>Email*</p>

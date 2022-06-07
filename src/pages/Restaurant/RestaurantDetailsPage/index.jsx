@@ -1,7 +1,9 @@
 import { FormControl, MenuItem, Select } from "@mui/material";
 import React, { useState } from "react";
+import { Header } from "../../../components/Header";
 import ProductCard from "../../../components/ProductCard";
 import { RestaurantCardDetails } from "../../../components/RestaurantCardDetails";
+import { products } from "../../Product/productList";
 import restaurants from "../restaurantList";
 import { ContainerModal, ModalSelect, StyledButton } from "./styled";
 
@@ -17,15 +19,17 @@ export const RestaurantDetailsPage = () => {
       const closeModal=()=>{
         setOpen(!open);
       }
-  const productList=restaurants.map((restaurant)=>{
-    return restaurant.products
-  }).map((product)=>{
-   
-    return (<ProductCard
+  const productList=products.map((product)=>{
+   console.log(product);
+    return (
+    <>
+    <Header/>
+    <ProductCard
         product={product}
       openModal={openModal}
         key={product.id}
         />
+        </>
   )})
  
   

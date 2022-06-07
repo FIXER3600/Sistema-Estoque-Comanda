@@ -4,9 +4,11 @@ import { HeaderRestaurant } from '../../components/Header/HeaderRestaurant'
 import { ProductCardList } from '../../components/ProductCardList'
 
 import { products } from './productList'
-import { Container } from './styled'
+import { Container, PlusIcon } from './styled'
 
-
+import plusIcon from "../../assets/button-icon.jpg";
+import { goToRegisterProduct } from '../../routes/coordinator'
+import { useNavigate } from 'react-router-dom'
 export const ProductPage = () => {
 	const productList=products.map((prod)=>{
       return (
@@ -16,6 +18,7 @@ export const ProductPage = () => {
   )
   const [searchBar, setSearchBar] = useState("");
 
+  const navigate=useNavigate()
 
   const handleSearch = ({ target }) => {
     setSearchBar(target.value);
@@ -39,6 +42,10 @@ export const ProductPage = () => {
       <HeaderRestaurant searchBar={searchBar} handleSearch={handleSearch}/>
      
       {searchBar !== "" ? filterBySearch() :productList}
+      <PlusIcon
+        src={plusIcon}
+        onClick={() => goToRegisterProduct(navigate)}
+      />
     </Container>
   )
 }

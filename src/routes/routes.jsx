@@ -21,6 +21,7 @@ import { CartPage } from "../pages/Client/CartPage";
 import { ProductPage } from "../pages/Product";
 import { ProductDetailsPage } from "../pages/Product/ProductDetailsPage";
 import { ProductEditPage } from "../pages/Product/ProductEditPage";
+import { TablesPage } from "../pages/TablesPage";
 
 const AppRoutes = () => {
   return (
@@ -47,6 +48,7 @@ const AppRoutes = () => {
         <Route path="/product" element={<ProductPage />} />
         <Route path="/product/:id" element={<ProductDetailsPage />} />
         <Route path="/product/edit/:id" element={<ProductEditPage />} />
+        <Route path="/tables" element={<TablesPage />} />
       </Routes>
     </BrowserRouter>
   );

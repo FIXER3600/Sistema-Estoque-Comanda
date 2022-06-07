@@ -3,14 +3,11 @@ import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { ContainerHeader } from "./styled";
 import "./menu.css";
-export const HeaderAttendant = () => {
+export const HeaderAttendant = ({searchBar,handleSearch}) => {
   const page = () => {
-    if (window.location.pathname === "/" || "/login" || "/home" || "/sigin") {
-      return "";
-    } else if (window.location.pathname === "/profile") {
-      return "Meu Perfil";
-    } else if (window.location.pathname === "/profile/edit") {
-      return "Editar";
+  
+     if (window.location.pathname=="/tables") {
+      return "Mesas";
     }
   };
 
@@ -28,7 +25,11 @@ export const HeaderAttendant = () => {
                 Home
               </a>
             </li>
-
+            <li>
+              <a className="nav-item" href="/tables">
+                Mesas
+              </a>
+            </li>
             <li>
               <a className="nav-item" href="/profile">
                 Perfil
@@ -40,6 +41,8 @@ export const HeaderAttendant = () => {
         {window.location.pathname === "/homeAttendant" ? (
           <TextField
             label="Busque o Pedido"
+            value={searchBar}
+            onChange={handleSearch}
             InputProps={{
               endAdornment: (
                 <InputAdornment>

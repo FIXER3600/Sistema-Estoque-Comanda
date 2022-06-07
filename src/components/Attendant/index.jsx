@@ -12,7 +12,7 @@ export const Attendant = ({ attendant }) => {
       <span>{attendant.name}</span>
       <ContainerDetails>
         <span>{attendant.age} anos</span>
-        <ShippingText>Status: {attendant.status}</ShippingText>
+        <ShippingText>{attendant.status}</ShippingText>
       </ContainerDetails>
     </Container>
   );
