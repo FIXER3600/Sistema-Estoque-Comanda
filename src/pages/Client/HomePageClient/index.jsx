@@ -4,8 +4,11 @@ import { Restaurant } from "../../../components/Restaurant";
 import { Container } from "./styled";
 
 import restaurantList from "../../Restaurant/restaurantList";
+import { Select } from "@chakra-ui/react";
+
 export const HomePage = () => {
   const [searchBar, setSearchBar] = useState("");
+  const [category,setCategory]=useState("");
   const handleSearch = ({ target }) => {
     setSearchBar(target.value);
   };
@@ -30,10 +33,34 @@ export const HomePage = () => {
       return <span> Não encontramos 🙁 </span>;
     }
   };
+  const categories=restaurantList.map((restaurant)=>{
+    return (<option value={restaurant.category}>{restaurant.category}</option>)
+  })
+ 
+
+  const handleCategory=({target})=>{
+    setCategory(target.value)
+  }
+  const filterByCategory=()=>{
+    const categoryRestaurants=restaurantsList.filter(({props})=>{
+      return props.restaurant.category
+      .includes(category)
+    })
+    return categoryRestaurants
+  }
   return (
     <Container>
       <Header searchBar={searchBar} handleSearch={handleSearch} />
-      {searchBar !== "" ? filterBySearch() : restaurantsList}
+      <Select
+        type="text"
+        size="md"
+        mt="3rem"
+        w="20rem"
+        placeholder="Categoria"
+        onChange={handleCategory}>
+       {categories}
+      </Select>
+      {category !== "" ? filterByCategory() : searchBar !== "" ? filterBySearch() : restaurantsList}
     </Container>
   );
 };

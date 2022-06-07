@@ -63,6 +63,20 @@ export const RegisterProduct = () => {
         p="0.5rem"
         placeholder='Digite a Quantidade no estoque'/>
         </Container>
+        <Container>
+        <Text>Restaurante</Text>
+        <StyledInput 
+        type={"text"} 
+        name={"restaurant"} 
+        required 
+        value={form.restaurant} 
+        onChange={onChangeForm}
+        size="md"
+        w="30rem"
+        p="0.5rem"
+        placeholder='Digite o Restaurante do Produto'
+        autoComplete="name"/>
+        </Container>
 	<Container>
         <Text>Image URL (opcional)</Text>
         <StyledInput 

@@ -27,3 +27,7 @@ export const StyledInput = styled(TextField)`
   margin: 0.5rem 1rem;
   border-radius: 30px;
 `;
+
+export const StyledTextField=styled(TextField) `
+	margin: 1rem;
+`

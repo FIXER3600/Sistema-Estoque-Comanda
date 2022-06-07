@@ -7,7 +7,7 @@ export const Restaurant = ({ restaurant }) => {
   const navigate = useNavigate();
 
   return (
-    <Container onClick={() => goToRestaurantDetailsPage(navigate)}>
+    <Container onClick={() => goToRestaurantDetailsPage(navigate,restaurant.id)}>
       <img src={restaurant.logoUrl} alt="Logo Restaurante" />
       <span>{restaurant.name}</span>
       <ContainerDetails>

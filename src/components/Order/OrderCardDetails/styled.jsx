@@ -27,8 +27,8 @@ export const Img = styled.img`
 
 export const ContainerDetails = styled.article`
   min-height: 268px;
-  max-height: 268px;
-  margin-top: 17.008px;
+  max-height: auto;
+  margin-top: 2rem;
   border-radius: 8px;
   overflow: hidden;
   margin-left: 16px;

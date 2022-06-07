@@ -5,7 +5,7 @@ import { primaryColor,secondaryColor } from "../../constants/colors";
 export const Container = styled.div`
   width: 100%;
   min-height: 148px;
-  max-height: 148px;
+  max-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -17,8 +17,8 @@ export const Container = styled.div`
 
 export const Img=styled.img`
     width: 100%;
-    height: 120px;
-    object-fit: cover;
+    height: auto;
+    object-fit: fill;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     display: flex;
@@ -28,7 +28,7 @@ export const Img=styled.img`
 
 export const ContainerDetails = styled.article`
   min-height: 268px;
-  max-height: 268px;
+  max-height:600px;
   margin-top: 17.008px;
   border-radius: 8px;
   overflow: hidden;

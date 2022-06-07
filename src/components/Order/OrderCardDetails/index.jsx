@@ -1,5 +1,7 @@
 import { Img } from "@chakra-ui/react";
 import React from "react";
+import { useParams } from "react-router-dom";
+import { orderList } from "../../../pages/Order/orderList";
 import {
   Address,
   Category,
@@ -9,32 +11,28 @@ import {
   Name
 } from "./styled";
 
-export const OrderCardDetails = ({
-  logoUrl,
-  name,
-  category,
-  deliveryTime,
-  shipping,
-  address
-}) => {
+export const OrderCardDetails = () => {
+  const param=useParams()
+	const findOrder=()=>{
+	  return orderList.find((order)=>order.id==param.id)
+	}
+  console.log(findOrder());
   return (
     <div>
       {" "}
       <ContainerDetails>
-        <Img src={logoUrl} alt="Imagem do Pedido" />
+        <Img src={findOrder().img} alt="Imagem do Pedido" />
         <Container>
-          <Name>{name}</Name>
-          <Category>{category}</Category>
+          <Name>Mesa: {findOrder().number}</Name>
+          <Category>{findOrder().status}</Category>
           <ContainerNumb>
+           
             <p>
-              {Math.floor(deliveryTime * 0.9)} - {deliveryTime} min
-            </p>
-            <p>
-              Frete R$
-              {Number(shipping).toFixed(2)}
+              Quantidade: 
+              {Number(findOrder().quantity).toFixed(2)}
             </p>
           </ContainerNumb>
-          <Address>{address}</Address>
+          <Address>{findOrder().address}</Address>
         </Container>
       </ContainerDetails>
     </div>

@@ -1,3 +1,4 @@
+
 import styled from "styled-components"
 
 export const Container = styled.div`
@@ -16,6 +17,7 @@ export const DatesDiv = styled.div`
   margin-right: 1rem;
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 `
 
@@ -29,7 +31,7 @@ export const UserName = styled.span`
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.39px;
-  margin-left: 8.5rem;
+  margin-left: 2.5rem;
   
   
 `
@@ -57,6 +59,7 @@ export const AddressDiv = styled.div`
 export const AddressTitle = styled.span`
   font-family: "Roboto";
   font-size: 1rem;
+  margin: 1rem;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -78,15 +81,19 @@ export const Email = styled.span`
   
 `
 export const DivEmail=styled.div`
+
 p{margin: 1rem;}
+input{margin-left:1rem; margin-bottom:1rem}
 border-bottom: 0.1rem solid black;
 `
 export const DivCPF=styled.div`
 p{margin: 1rem;}
+input{margin-left:1rem}
 border-bottom: 0.1rem solid black;
 `
 export const DivTel=styled.div`
 p{margin: 1rem;}
+input{margin-left:1rem}
 border-bottom: 0.1rem solid black;
 `
 export const Tel=styled.div`
@@ -113,44 +120,13 @@ export const CPF = styled.div`
   line-height: normal;
   letter-spacing: -0.39px;
 `
-export const HistoryTitle = styled.span`
-  width: 20.5rem;
-  height: 1.125rem;
-  margin: 1rem 1rem 0.5rem;
-  font-family: Roboto;
-  font-size: 1rem;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.39px;
-`
 
 export const Path = styled.div`
   height: 0.063rem;
   margin: 0.5rem 1rem 1rem;
   border: solid 1px black;
 `
-export const HistoryContainer = styled.div`
-  margin-top: 1rem;
-`
-export const HistoryDiv = styled.div`
-  text-align: center;
-`
-export const History = styled.span`
-  width: 18.5rem;
-  height: 1.125rem;
-  opacity: 0.89;
-  font-family: Roboto;
-  font-size: 1rem;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.39px;
-  text-align: center;
-  color: black;
-`
 
-
-
+export const Input=styled.input`
+display: none;
+`

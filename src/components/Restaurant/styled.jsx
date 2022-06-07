@@ -9,7 +9,7 @@ export const Container = styled.div`
   cursor: pointer;
   img {
     width: 20.5rem;
-    height: 7.5rem;
+    height: auto;
     margin: 0 0 0.75rem;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -40,13 +40,15 @@ export const ContainerDetails = styled.div`
     font-style: normal;
     line-height: normal;
     letter-spacing: -0.39px;
+    margin-bottom:1.5rem;
     color: rgb(184, 184, 184);
   }
 `;
 
 export const ShippingText = styled.span`
   font-family: "Roboto";
-  font-size: 1rem;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;

@@ -1,23 +1,27 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { goToOrderDetailsPage } from '../../routes/coordinator'
-import { Container, ContainerDetails, ShippingText } from './styled'
+import { Container, ContainerDetails, Duration, OrderNumber, OrderStatus, ShippingText } from './styled'
 
-export const Order = () => {
+export const Order = ({order}) => {
 	const navigate = useNavigate()
-
 	return (
-	  <Container onClick={() => goToOrderDetailsPage(navigate)}>
-	    <img src={""} alt="Pedido" />
-	    <span>Pedido 01</span>
+	  <Container onClick={() => goToOrderDetailsPage(navigate,order.id)}>
+	    <img src={order.img} alt="Pedido" />
+	   
+	    <OrderNumber>Pedido {order.number}</OrderNumber>
+	    <Duration>Duração: {order.duration} min</Duration>
 	    <ContainerDetails>
-	      <span>
-		Ativo
-	      </span>
+	      <OrderStatus>
+		{order.status}
+	      </OrderStatus>
 	      <ShippingText>
-		Produto: 20 Esfiha(s)
+		Produto: {order.quantity} Esfiha(s)
 	      </ShippingText>
 	    </ContainerDetails>
+	  
+	    
 	  </Container>
 	)
 }

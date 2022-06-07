@@ -1,5 +1,8 @@
 import styled from "styled-components"
 
+export const Duration=styled.span`
+  margin-left: 7.5rem;
+`
 export const Container = styled.div`
   width: 20.5rem;
   height: auto;
@@ -8,14 +11,15 @@ export const Container = styled.div`
   border: 1px solid rgb(184, 184, 184);
   img {
     width: 20.5rem;
-    height: 7.5rem;
+    height: auto;
     margin: 0 0 0.75rem;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     object-fit: fill;
   }
-  span {
-    width: 18.5rem;
+`
+export const OrderStatus=styled.span`
+  width: 18.5rem;
     height: 1.125rem;
     margin: 0.75rem 1rem 0.25rem;
     font-family: "Roboto";
@@ -26,7 +30,19 @@ export const Container = styled.div`
     line-height: normal;
     letter-spacing: -0.39px;
     color: red;
-  }
+`
+export const OrderNumber=styled.span`
+  width: 18.5rem;
+    height: 1.125rem;
+    margin: 0.75rem 1rem 0.25rem;
+    font-family: "Roboto";
+    font-size: 1rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.39px;
+    color: red;
 `
 
 export const ContainerDetails = styled.div`
@@ -53,4 +69,6 @@ export const ShippingText = styled.span`
   letter-spacing: -0.39px;
   color: grey;
   text-align: end;
+  margin-right: 1rem;
 `
+

@@ -1,7 +1,7 @@
 import { IconButton, InputAdornment, TextField } from "@mui/material";
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
-import { ContainerHeader } from "./styled";
+import { ContainerHeader, StyledTextField } from "./styled";
 import "./menu.css";
 export const HeaderRestaurant = ({ searchBar, handleSearch }) => {
   const page = () => {
@@ -26,6 +26,11 @@ export const HeaderRestaurant = ({ searchBar, handleSearch }) => {
             <li>
               <a className="nav-item" href="/homeRestaurant">
                 Home
+              </a>
+            </li>
+            <li>
+              <a className="nav-item" href="/product">
+               Produtos
               </a>
             </li>
 
@@ -53,7 +58,24 @@ export const HeaderRestaurant = ({ searchBar, handleSearch }) => {
               ),
             }}
           />
-        ) : (
+        ) : window.location.pathname==="/product"?(
+          <StyledTextField
+     
+          label="Busque o produto"
+          value={searchBar}
+          onChange={handleSearch}
+          type="search"
+          InputProps={{
+            endAdornment: (
+              <InputAdornment>
+                <IconButton>
+                  <SearchIcon />
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
+        />
+        ): (
           <p>{page()}</p>
         )}
       </header>

@@ -18,7 +18,10 @@ export const ContainerHeader = styled.div`
   p {
     align-self: center;
     font-weight: bold;
+    text-align: center;
+    margin-right: 2.5rem;
     font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
   }
 `;
 export const StyledInput = styled(TextField)`
