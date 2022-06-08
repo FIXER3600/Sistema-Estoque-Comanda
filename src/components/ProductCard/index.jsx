@@ -36,7 +36,8 @@ console.log(product);
       <ContainerDetails>
         <h3>{product.name}</h3>
         <p>{product.description}</p>
-        <span>Quantidade: {product.quantity}</span>
+{window.location.pathname === "/cart" || `/product/${id}` ? " " : }
+        <span>{window.location.pathname === "/cart" || `/product/${id}` ? " " : `Quantidade: ${product.quantity}`}</span>
         
         <button onClick={() => openModal()}>
           {window.location.pathname === "/cart"? "Remover":"Adicionar"}
