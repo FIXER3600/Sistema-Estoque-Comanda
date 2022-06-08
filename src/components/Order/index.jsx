@@ -20,8 +20,6 @@ export const Order = ({order}) => {
 		Produto: {order.quantity} Esfiha(s)
 	      </ShippingText>
 	    </ContainerDetails>
-	  
-	    
 	  </Container>
 	)
 }

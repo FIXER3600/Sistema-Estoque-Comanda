@@ -10,7 +10,7 @@ export const ProductCardList = ({product}) => {
 	<img src={product.img} alt="Produto" />
 	<span>{product.name}</span>
 	<ContainerDetails>
-	  <span>R$ {product.price}</span>
+	  <span>Quantidade: {product.quantity}</span>
 	  <ShippingText>{product.restaurant}</ShippingText>
 	</ContainerDetails>
       </Container>

@@ -36,7 +36,7 @@ console.log(product);
       <ContainerDetails>
         <h3>{product.name}</h3>
         <p>{product.description}</p>
-        <span>R$ {Number(product.price).toFixed(2)}</span>
+        <span>Quantidade: {product.quantity}</span>
         
         <button onClick={() => openModal()}>
           {window.location.pathname === "/cart"? "Remover":"Adicionar"}

@@ -5,7 +5,7 @@ export const orderList=[
 		number:1,
 		name:`Pedido 1`,
 		status:"Ativado",
-		quantity:10,
+		quantity:4,
 		duration:50,
 		products:[
 			{
@@ -35,7 +35,7 @@ export const orderList=[
 		name:`Pedido 2`,
 		
 		status:"Ativado",
-		quantity:1,
+		quantity:4,
 		duration:40,
 		products:[
 
@@ -48,7 +48,7 @@ export const orderList=[
 		name:`Pedido 3`,
 		
 		status:"Ativado",
-		quantity:2,
+		quantity:4,
 		duration:30,
 		products:[]
 	},
@@ -59,7 +59,7 @@ export const orderList=[
 		name:`Pedido 4`,
 		
 		status:"Ativado",
-		quantity:0,
+		quantity:4,
 		duration:50,
 		products:[]
 	}

@@ -23,16 +23,16 @@ export const OrderCardDetails = () => {
       <ContainerDetails>
         <Img src={findOrder().img} alt="Imagem do Pedido" />
         <Container>
-          <Name>Mesa: {findOrder().number}</Name>
+          <Name>Mesa {findOrder().number}</Name>
           <Category>{findOrder().status}</Category>
           <ContainerNumb>
            
             <p>
-              Quantidade: 
-              {Number(findOrder().quantity).toFixed(2)}
+              Quantidade:  
+            {" "+findOrder().quantity}
             </p>
           </ContainerNumb>
-          <Address>{findOrder().address}</Address>
+          <Address>Duração: {findOrder().duration} min</Address>
         </Container>
       </ContainerDetails>
     </div>
