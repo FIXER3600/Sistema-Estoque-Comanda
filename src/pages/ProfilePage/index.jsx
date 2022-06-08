@@ -3,6 +3,7 @@ import { Header } from "../../components/Header";
 import {
   AddressDiv,
   AddressTitle,
+  ButtonStyled,
   Container,
   CPF,
   DatesDiv,
@@ -11,6 +12,7 @@ import {
   HistoryTitle,
   Path,
   ProfileDetails,
+  StyledButton,
   UserImg,
   UserName
 } from "./styled";
@@ -55,6 +57,18 @@ export const ProfilePage = () => {
           </div>
         </ProfileDetails>
       </Container>
+      <ButtonStyled>
+        <StyledButton
+          textPrimary={"primary"}
+          color={"primary"}
+          fullWidth
+          variant="contained"
+          type="submit"
+          margin={"normal"}
+        >
+          Logout
+        </StyledButton>
+      </ButtonStyled>
     </div>
   );
 };
