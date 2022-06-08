@@ -49,3 +49,5 @@ export const goToRegisterProduct=(navigate)=>{
 export const goToProductEditPage=(navigate,id)=>{
 	navigate(`/product/edit/${id}`)
 }
+
+

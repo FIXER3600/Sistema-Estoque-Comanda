@@ -19,7 +19,7 @@ import {
 import Edit from "../../assets/edit.png";
 import User from "../../assets/profile.png";
 import { useNavigate } from "react-router-dom";
-import { goToEditProfilePage } from "../../routes/coordinator";
+import { goToEditProfilePage, goToLoginPage } from "../../routes/coordinator";
 import { HeaderProfile } from "../../components/HeaderProfile";
 export const ProfilePage = () => {
   const navigate = useNavigate();
@@ -65,6 +65,7 @@ export const ProfilePage = () => {
           variant="contained"
           type="submit"
           margin={"normal"}
+          onClick={()=>goToLoginPage(navigate)}
         >
           Logout
         </StyledButton>
