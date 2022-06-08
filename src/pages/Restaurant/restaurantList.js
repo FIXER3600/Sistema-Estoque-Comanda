@@ -2,7 +2,7 @@ export const restaurants = [
   {
     id: "1",
     description:
-      "Habib's é uma rede de restaurantes de comida rápida brasileira especializada em culinária árabe, os restaurantes vendem mais de 600 milhões de esfirras por ano. A empresa emprega 22 mil colaboradores e tem 421 unidades distribuídas em mais de cem municípios em 20 unidades federativas.",
+      "Habib's é uma rede de restaurantes de comida rápida brasileira especializada em culinária árabe, os restaurantes vendem mais de 600 milhões de esfirras por ano.",
     shipping: 6,
     address: "Rua das Margaridas, 110",
     name: "Habibs",
@@ -250,7 +250,7 @@ export const restaurants = [
     deliveryTime: 20,
     category: "Mexicana",
     description:
-      "Falar em Mexicaníssimo é falar em comer uma comida tradicional e original mexicana! Diferentemente dos restaurantes tex-mex, aqui você encontra um menu completo tradicionalmente mexicano e com opções para vegetarianos e veganos.",
+      "Falar em Mexicaníssimo é falar em comer uma comida tradicional e original mexicana! Aqui você encontra um menu completo tradicionalmente mexicano e com opções para vegetarianos e veganos.",
     shipping: 3,
     address: "Largo dos Jaguarés, 12",
     products:[

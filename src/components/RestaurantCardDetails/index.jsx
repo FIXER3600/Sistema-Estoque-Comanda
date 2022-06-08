@@ -28,11 +28,7 @@ export const RestaurantCardDetails = () => {
           <ContainerNumb>
        
               <p>
-                {Math.floor(findRestaurant().deliveryTime * 0.9)} - {findRestaurant().deliveryTime} min
-              </p>
-	      <p>
-              Frete R$
-              {Number(findRestaurant().shipping).toFixed(2)}
+              {findRestaurant().description}
 	      </p>
           </ContainerNumb>
           <Address>{findRestaurant().address}</Address>
