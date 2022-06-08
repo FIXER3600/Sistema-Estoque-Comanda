@@ -11,6 +11,8 @@ export const ProfileDetails = styled.div`
 `
 export const UserImg=styled.img`
  margin-left: 5rem;
+ max-width:200px;
+ max-height: 2000px;
 `
 
 export const DatesDiv = styled.div`

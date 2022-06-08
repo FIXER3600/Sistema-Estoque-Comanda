@@ -22,13 +22,17 @@ export const products=[
 		name:"Kibe",
 		price:1.50,
 		description:"Aquele sabor único do nosso tempero com especiarias árabes e agora com um novo recheio: mussarela. Incrível.",
-		img:"https://www.habibs.com.br/storage/products/images/14112_carrinho.png"
+		img:"https://www.habibs.com.br/storage/products/images/14112_carrinho.png",
+		restaurant:"Habibs",
+		quantity:4000
 	      },
 	      {
 		id:"3",
 		name:"Bolinho de Bacalhau",
 		price:2.00,
 		description:"Essa delícia portuguesa ficou ainda melhor com o toque especial do Habib’s. Cuidado: O bolinho pode ter espinhas.",
-		img:"https://www.habibs.com.br/storage/products/images/2651_interna.png"
+		img:"https://www.habibs.com.br/storage/products/images/2651_interna.png",
+		restaurant:"Habibs",
+		quantity:3000
 	      } 
 ]

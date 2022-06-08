@@ -52,6 +52,18 @@ export const ProductEditPage = () => {
         p="0.5rem"
         placeholder='Digite a Quantidade no estoque'/>
         </Container>
+        <Container>
+        <Text>Descrição</Text>
+        <StyledInput 
+        type={"text"} 
+        name={"description"} 
+        required 
+        size="md"
+        w="30rem"
+        p="0.5rem"
+        placeholder='Digite a nova descrição do produto'
+        />
+        </Container>
 	<Container>
         <Text>Image URL (opcional)</Text>
         <StyledInput 

@@ -4,6 +4,7 @@ import { OrderCardDetails } from "../../../components/Order/OrderCardDetails";
 import ProductCard from "../../../components/ProductCard";
 import { products } from "../../Product/productList";
 import { orderList } from "../orderList";
+import { StyledButton } from "./styled";
 
 export const OrderDetailsPage = () => {
   
@@ -15,6 +16,16 @@ export const OrderDetailsPage = () => {
 
       <OrderCardDetails />
     {product}
+    <StyledButton
+              textPrimary={"secondary"}
+              color={"primary"}
+              fullWidth
+              variant="contained"
+              type="submit"
+              margin={"normal"}
+            >
+              Cancelar
+            </StyledButton>
     </div>
   );
 };
