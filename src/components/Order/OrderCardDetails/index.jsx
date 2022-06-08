@@ -16,7 +16,7 @@ export const OrderCardDetails = () => {
 	const findOrder=()=>{
 	  return orderList.find((order)=>order.id==param.id)
 	}
-  console.log(findOrder());
+  console.log(findOrder().quantity);
   return (
     <div>
       {" "}
@@ -25,12 +25,17 @@ export const OrderCardDetails = () => {
         <Container>
           <Name>Mesa {findOrder().number}</Name>
           <Category>{findOrder().status}</Category>
+          <p>
+              Cliente:  
+            {" "+findOrder().clientName}
+            </p>
           <ContainerNumb>
-           
+         
             <p>
               Quantidade:  
             {" "+findOrder().quantity}
             </p>
+
           </ContainerNumb>
           <Address>Duração: {findOrder().duration} min</Address>
         </Container>
