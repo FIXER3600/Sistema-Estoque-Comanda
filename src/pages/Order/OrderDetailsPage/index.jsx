@@ -1,10 +1,11 @@
+import { Flex } from "@chakra-ui/react";
 import React from "react";
 import { HeaderAttendant } from "../../../components/Header/HeaderAttendant";
 import { OrderCardDetails } from "../../../components/Order/OrderCardDetails";
 import ProductCard from "../../../components/ProductCard";
 import { products } from "../../Product/productList";
 import { orderList } from "../orderList";
-import { StyledButton } from "./styled";
+import { StyledButton, StyledButtonFinalize } from "./styled";
 
 export const OrderDetailsPage = () => {
   
@@ -16,7 +17,18 @@ export const OrderDetailsPage = () => {
 
       <OrderCardDetails />
     {product}
-    <StyledButton
+    <Flex>
+       <StyledButtonFinalize
+              textPrimary={"secondary"}
+              color={"primary"}
+              fullWidth
+              variant="contained"
+              type="submit"
+              margin={"normal"}
+            >
+              Finalizar
+            </StyledButtonFinalize>
+            <StyledButton
               textPrimary={"secondary"}
               color={"primary"}
               fullWidth
@@ -26,6 +38,8 @@ export const OrderDetailsPage = () => {
             >
               Cancelar
             </StyledButton>
+            </Flex>
+   
     </div>
   );
 };
